@@ -1,4 +1,5 @@
 package week2;
+
 import java.util.*;
 import java.io.*;
 
@@ -20,8 +21,8 @@ public class BJ_14503_로봇청소기 {
 			
 			for (int k = 0; k < 4; k++) {
 				// 왼쪽 영역을 탐색한다.
-				if (d == 0) d = 3;
-				else d -= 1;
+				
+				d = (d + 3) % 4;
 				
 				// 왼쪽이 0이라면 회전하고 한 칸 전진한다.
 				int nx = r+dx[d];
@@ -36,10 +37,7 @@ public class BJ_14503_로봇청소기 {
 			}
 			
 			// 네 방향 모두 청소가 되어 있다면 뒤로 이동
-			int back = 0;
-			
-			if (d < 2) back = d + 2;
-			else back = d - 2;
+			int back = (d + 2) % 4;
 			
 			int nx = r + dx[back];
 			int ny = c + dy[back];
