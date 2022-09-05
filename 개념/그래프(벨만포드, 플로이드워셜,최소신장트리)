@@ -26,7 +26,7 @@
     
     - 시간 복잡도는 O(VE)가 됨!
     
-<img src ="https://user-images.githubusercontent.com/60287901/188415114-47a30ae5-80b8-4198-983e-48220fce392e.png" />
+<img src="https://user-images.githubusercontent.com/60287901/188415114-47a30ae5-80b8-4198-983e-48220fce392e.png" />
 
     
 3. 음수 사이클 유무 확인하기
@@ -35,7 +35,7 @@
     - 업데이트 되는 노드가 있다 = 음수 사이클이 있다 
     
      => 최단거리배열이 무의미하고 그래프는 최단 거리를 찾을 수 없다는 의미가 됨 !
-<img src ="https://user-images.githubusercontent.com/60287901/188415285-e3f8dc90-47c9-4e1b-8e44-7f3d342f2a67.png" />
+<img src="https://user-images.githubusercontent.com/60287901/188415285-e3f8dc90-47c9-4e1b-8e44-7f3d342f2a67.png" />
 
  ### 플로이드-워셜
 > **전체 쌍** 최단 경로 문제 _ DP로 접근하자!
@@ -60,10 +60,10 @@
 1. 배열 선언하고 초기화하기(인접행렬)
 	- D[s][e]는 노드 S에서 E까지의 최단거리를 저장하는 배열
     - if(s == e) D[s][e] =0; else D[s][e] = INF
-<img src ="https://user-images.githubusercontent.com/60287901/188415443-c9200638-c796-4675-963d-d76f6cc34a00.png" />
+<img src="https://user-images.githubusercontent.com/60287901/188415443-c9200638-c796-4675-963d-d76f6cc34a00.png" />
 2. 최단 거리 배열에 그래프 데이터 저장하기
 
-<img src ="https://user-images.githubusercontent.com/60287901/188415608-68e19eb7-2156-4d02-9554-a81daf9c2856.png" />
+<img src="https://user-images.githubusercontent.com/60287901/188415608-68e19eb7-2156-4d02-9554-a81daf9c2856.png" />
 
 
 3. 배열 업데이트하기
@@ -73,16 +73,16 @@ for 경유지 K에 대해 (1~N)
     	for 도착노드 E에 대해(1~N)
         	D[s][e] = Math.min(D[s][e], D[s][k]+D[k][e])
 ```
-<img src = "https://user-images.githubusercontent.com/60287901/188415712-eb848de2-2610-4afb-b339-097779c9ef15.png" />
+<img src="https://user-images.githubusercontent.com/60287901/188415712-eb848de2-2610-4afb-b339-097779c9ef15.png" />
 
  ### 신장 트리(Spanning tree)
 > 연결 그래프이며, G의 모든 정점을 포함하고 있는 트리구조.
 트리의 종류는 하나가 아니다.
 
 ex)
-<img src ="https://user-images.githubusercontent.com/60287901/188415925-d5919000-3bcb-4034-bbdc-c9f18f01a4c3.png" />
+<img src="https://user-images.githubusercontent.com/60287901/188415925-d5919000-3bcb-4034-bbdc-c9f18f01a4c3.png" />
 💡 신장 트리로 만들기 위해서는 모든 순회를 없애야 한다.
-<img src= "https://user-images.githubusercontent.com/60287901/188416031-675a11bc-f7be-4a07-a3f3-657d27530ed9.png" />
+<img src="https://user-images.githubusercontent.com/60287901/188416031-675a11bc-f7be-4a07-a3f3-657d27530ed9.png" />
 
 
  ### 최소 신장 트리
